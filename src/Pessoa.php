@@ -1,5 +1,5 @@
 <?php
-require_once 'Endereco.php';
+
 class Pessoa
 {
     private  $nome;
