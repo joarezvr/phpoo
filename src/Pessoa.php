@@ -1,11 +1,10 @@
 <?php
-
-abstract class Pessoa
+require_once 'Endereco.php';
+class Pessoa
 {
     private  $nome;
     private  $idade;
     private $endereco;
-    protected $desconto;
     private static $contadorPessoa = 0;
 
     public function __construct($nome, $idade, $endereco)
@@ -15,7 +14,6 @@ abstract class Pessoa
         $this->idade = $idade;
         $this->endereco = $endereco;
         $this->validaIdade($idade);
-        $this->setDesconto();
         self::contadorPessoa(self::$contadorPessoa);
     }
 
@@ -71,12 +69,5 @@ abstract class Pessoa
     {
         $contadorPessoa++;
         self::setcontadorPessoa($contadorPessoa);
-    }
-
-    protected abstract function setDesconto();
-
-    public function getDesconto()
-    {
-        return $this->desconto;
     }
 }
