@@ -32,4 +32,10 @@ class Funcionario extends Pessoa
     {
         $this->salario = $salario;
     }
+
+    public function setDesconto()
+    {
+        $this->desconto = 0.10; 
+    }
+
 }

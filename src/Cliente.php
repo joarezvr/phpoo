@@ -32,4 +32,8 @@ class Cliente extends Pessoa
         $this->renda = $renda;
     }
 
+    public function setDesconto()
+    {
+        $this->desconto = 0.05; 
+    }
 }
